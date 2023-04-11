@@ -23,7 +23,9 @@ public class SetCookieValue extends HttpServlet{
 		Date date = new Date();
 		Cookie c = new Cookie("cookieTest", URLEncoder.encode("JSP프로그래밍", "utf-8"));
 		//유효시간 24시간으로 설정
-		c.setMaxAge(60*60*24);
+		//c.setMaxAge(60*60*24);
+		//-1로 설정하면 세션 쿠키 생성
+		c.setMaxAge(-1);
 		response.addCookie(c);
 		w.println("현재시간 : " + date);
 		w.println("문자열을 Cookie에 저장합니다.");
