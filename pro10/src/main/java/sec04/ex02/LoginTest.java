@@ -47,9 +47,9 @@ public class LoginTest extends HttpServlet{
 		w.println("총 접속자 수는 " + LoginImpl.total_user + "<br>");
 		w.println("접속 아이디 : <br>");
 		
-		List list = (ArrayList) context.getAttribute("user_list");
-		for(int i=0; i<list.size(); i++) {
-			w.println(list.get(i) + "<br>");
+//		List list = (ArrayList) context.getAttribute("user_list");
+		for(int i=0; i<user_list.size(); i++) {
+			w.println(user_list.get(i) + "<br>");
 		}
 		
 		w.println("<a href='logout?user_id=" + userId + "'>로그아웃</a>");
